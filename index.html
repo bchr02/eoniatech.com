@@ -8,61 +8,125 @@
     <style>
       body {
         font-family: "Roboto", Arial, sans-serif;
-        background: #f7f9fa;
+        background: linear-gradient(135deg, #e3f6f5 0%, #f7f9fa 100%);
         margin: 0;
         padding: 0;
         color: #222;
+        min-height: 100vh;
       }
       .container {
-        max-width: 600px;
-        margin: 40px auto;
+        max-width: 520px;
+        margin: 48px auto 0 auto;
         background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-        padding: 40px 32px 32px 32px;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(43, 122, 120, 0.13), 0 1.5px 8px rgba(26, 58, 93, 0.07);
+        padding: 48px 32px 40px 32px;
         text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .container:before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, #2b7a78 0%, #fff0 80%);
+        opacity: 0.12;
+        z-index: 0;
+      }
+      .container:after {
+        content: '';
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, #1a3a5d 0%, #fff0 80%);
+        opacity: 0.10;
+        z-index: 0;
       }
       .logo-img {
-        width: 120px;
-        height: 120px;
+        width: 220px;
+        height: 220px;
         object-fit: contain;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 0 4px 24px rgba(43, 122, 120, 0.10);
+        border-radius: 50%;
+        background: #f7f9fa;
+        position: relative;
+        z-index: 1;
       }
       h1 {
         margin-top: 0;
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         color: #1a3a5d;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
+        font-weight: 900;
+        position: relative;
+        z-index: 1;
       }
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.35rem;
         color: #2b7a78;
-        margin-bottom: 24px;
+        margin-bottom: 28px;
         margin-top: 0;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 1;
       }
       p {
-        font-size: 1.1rem;
-        line-height: 1.7;
+        font-size: 1.13rem;
+        line-height: 1.8;
         color: #333;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
       }
       .contact {
-        margin-top: 32px;
-        font-size: 1.1rem;
+        margin-top: 38px;
+        font-size: 1.13rem;
+        background: #e3f6f5;
+        border-radius: 8px;
+        padding: 16px 0 12px 0;
+        box-shadow: 0 2px 8px rgba(43, 122, 120, 0.07);
+        position: relative;
+        z-index: 1;
+      }
+      .contact strong {
+        color: #1a3a5d;
+        font-weight: 700;
+        letter-spacing: 0.5px;
       }
       .contact a {
         color: #2b7a78;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 600;
+        margin-left: 6px;
+        transition: color 0.2s;
       }
       .contact a:hover {
+        color: #1a3a5d;
         text-decoration: underline;
       }
       @media (max-width: 700px) {
         .container {
-          padding: 24px 8px;
+          padding: 24px 4px 20px 4px;
+        }
+        .logo-img {
+          width: 150px;
+          height: 150px;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 1.05rem;
         }
       }
     </style>
